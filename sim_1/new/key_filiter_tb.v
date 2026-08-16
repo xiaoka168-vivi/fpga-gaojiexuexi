@@ -7,6 +7,7 @@ module key_filiter_tb;
   reg  Key;
   wire Key_P_Flag;
   wire Key_R_Flag;
+  reg  Key_State;
 
   initial Clk = 0;
   always #10 Clk = ~Clk;
@@ -17,6 +18,7 @@ module key_filiter_tb;
       .Reset_n(Reset_n),
       .Key(Key),
       .Key_P_Flag(Key_P_Flag),
+      .Key_State(Key_State),
       .Key_R_Flag(Key_R_Flag)
   );
 
